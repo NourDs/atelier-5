@@ -1,0 +1,29 @@
+class Etudiant:
+    def __init__(self, Name, prenom, age, cne, moyenne):
+        self.Name = Name
+        self.pre = prenom
+        self.age = age
+        self.cne = cne
+        self.moyen = moyenne
+
+    def __repr__(self):
+        return '{ Nom: ' + self.Name + ', Prenom: ' + self.pre + ', Age: ' + str(self.age) + ', CNE: ' + str(self.cne) + ', Moyenne: ' + str(self.moyen) + '}\n'
+    
+# Remplissage de list de type Etudiant
+
+etud = [
+        Etudiant('Nour', 'Dkhissi', 22, 123456889, 19),
+        Etudiant('Nada', 'Chentouf', 23, 987456321, 18),
+        Etudiant('Salma', 'dalil', 21, 147852369, 17),
+        Etudiant('Amal', ' El mokhtari', 21 , 369852147, 16)
+    ]
+
+# Affichage list ordonne par age
+print("triez par age")
+etud.sort(key=lambda x: x.age)
+print(etud)
+
+# Affichage list ordonne par moyenne
+print("triez par moyenne")
+etud.sort(key=lambda x: x.moyen)
+print(etud)
